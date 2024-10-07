@@ -64,7 +64,7 @@ backButton.addEventListener('click', () => {
 
 // Event listener for the back button to navigate to index.html
 indexbtn.addEventListener('click', () => {
-  window.location.href = 'index.html'; // Redirect to index.html
+  window.location.href = 'index2.html'; // Redirect to index.html
 });
 
 
