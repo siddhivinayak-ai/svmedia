@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Messages</title>
+    <link rel="stylesheet" href="dm.css">
+    <!-- Remix Icon CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Search Bar -->
+       
+        <div class="search-bar"> 
+            <i class="ri-arrow-left-line" id="indexbtn"></i>
+            <!-- <i class="ri-search-line"></i> -->
+            <input type="text" id="searchInput" placeholder="Search or start new chat">
+        </div>
+
+        <!-- Contact List -->
+        <div id="contactList" class="contact-list"></div>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chatWindow" class="chat-window hidden">
+        <div class="chat-header">
+            <i class="ri-arrow-left-line" id="backButton"></i>
+            <img src="" alt="Profile Picture" id="profilePic" class="profile-pic">
+            <div class="contact-info">
+                <h3 id="contactName"></h3>
+                <p id="contactNumber"></p>
+            </div>
+        </div>
+        
+        <!-- Chat Messages -->
+        <div id="chatMessages" class="chat-messages"></div>
+
+        <!-- Message Input -->
+        <div class="message-input">
+            <input type="text" id="messageInput" placeholder="Type a message">
+            <button id="sendMessage"><i class="ri-send-plane-line"></i></button>
+        </div>
+    </div>
+
+
+    <div class="bottom-nav">
+      <a id="active" href="index.html"><i class="ri-home-3-line"></i></a>
+      <a  href="explore.html"><i class="ri-search-line "></i></a>
+      <a href="reel.html"><i class="ri-video-line"></i></a>
+      <a href="shop.html"><i class="ri-shopping-bag-line"></i></a>
+      <a href="Plan&Book.html"><i class="ri-calendar-check-line"></i></a>
+      <!-- <a href="profile.html"><i class="ri-user-line"></i></a> -->
+  </div>
+
+    <script src="dm.js"></script>
+</body>
+</html>

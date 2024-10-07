@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <title>Shop</title>
+</head>
+<body>
+    <div class="top-navigation-bar">
+        
+        <input type="text" id="searchBar" placeholder="Search products, brands...">
+        <div class="icons">
+          <i class="ri-heart-line wishlist-icon"></i>
+          <a href="cart.html" class="cart-link">
+              <i class="ri-shopping-cart-line cart-icon"></i>
+              <!-- <div class="cart-count">0</div> -->
+          </a>
+      </div>
+    </div>
+
+    <div class="category-tabs">
+        <button class="category-btn" data-category="all">All</button>
+        <button class="category-btn" data-category="fashion">Fashion</button>
+        <button class="category-btn" data-category="beauty">Beauty</button>
+        <button class="category-btn" data-category="tech">Tech Gadgets</button>
+       
+    </div>
+    <div class="home-feed">
+        <div id="searchResults" class="search-results"></div>
+        <div class="product-grid"></div>
+    </div>
+    
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-product-details">
+                <img id="modalProductImage" src="" alt="Product Image">
+                <h2 id="modalProductName"></h2>
+                <p id="modalProductPrice"></p>
+                <p id="modalProductDescription"></p>
+                <label for="color">Color:</label>
+                <select id="modalProductColor">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="modalProductQuantity" min="1" value="1">
+                <div class="modal-actions">
+                    <button id="modalAddToCartBtn">Add to Cart</button>
+                    <button id="modalBuyNowBtn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="checkout-details">
+                <h2>Checkout</h2>
+                <div id="checkoutItems"></div>
+                <div class="checkout-total">
+                    <p>Total: <span id="checkoutTotal">Rs0.00</span></p>
+                    <button id="proceedToPayBtn">Proceed to Pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bottom-nav">
+      <a href="index.html"><i class="ri-home-3-line"></i></a>
+      <a href="explore.html"><i class="ri-search-line "></i></a>
+      <a href="reel.html"><i class="ri-video-line"></i></a>
+      <a id="active" href="shop.html"><i class="ri-shopping-bag-line"></i></a>
+      <a href="Plan&Book.html"><i class="ri-calendar-check-line"></i></a>
+      <!-- <a href="profile.html"><i class="ri-user-line"></i></a> -->
+    </div>
+    <script src="shop.js"></script>
+</body>
+</html>

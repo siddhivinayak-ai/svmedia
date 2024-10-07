@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet"> -->
+     
+    <title>Home</title>
+</head>
+<body>
+    <!-- Top Bar -->
+    
+    <div class="top-bar">
+        <div style="color:#00bfff;" class="logo">SV.Media</div>
+        <div class="top-icons">
+            <i class="ri-add-line" id="addPostBtn"></i>
+          
+            <i class="ri-mail-line" id="dmIcon"></i>
+            <!-- <a href="profile.html" class="profile-icon-link">
+                <i class="ri-user-line"></i>
+            </a> -->
+            
+            <i id="homeIcon" class="ri-login-box-line icon"></i>
+            <i id="userIcon" class="ri-key-2-line icon"></i>
+
+        </div>
+    </div>
+    
+    
+    
+
+
+<div class="stories">
+    <div class="stories-container" id="storiesContainer">
+        <!-- Stories will be populated here by JavaScript -->
+    </div>
+</div>
+
+<div id="storyModal" class="story-modal">
+    <div id="storyProgressBar"></div>
+    <video id="storyVideo" controls></video>
+    <button id="closeStory">Close</button>
+</div>
+
+
+    
+
+    
+
+
+    <!-- Post Feed Section -->
+    <div class="post-feed" id="postFeed">
+        <!-- Posts will be populated here by JavaScript -->
+    </div>
+
+    <!-- Add Post Modal -->
+    <div class="modal" id="addPostModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Add Post</h2>
+            <input type="file" id="postImage" accept="image/*,video/*">
+            <textarea id="postDescription" placeholder="Write a caption..."></textarea>
+            <button id="postBtn">Post</button>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <a id="active" href="index.html"><i class="ri-home-3-line"></i></a>
+        <a href="explore.html"><i class="ri-search-line"></i></a>
+        <a href="reel.html"><i class="ri-video-line"></i></a>
+        <a href="shop.html"><i class="ri-shopping-bag-line"></i></a>
+        <a href="Plan&Book.html"><i class="ri-calendar-check-line"></i></a>
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

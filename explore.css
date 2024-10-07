@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #000428, #004e92);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#searchBar {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+}
+
+.search-results {
+  padding: 10px;
+}
+
+.contacts {
+  padding: 10px;
+}
+
+.contacts h2 {
+  margin-bottom: 10px;
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.contact-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contact-card .username {
+  flex-grow: 1;
+}
+
+.contact-card .message-btn {
+  background: #00bfff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.trending-posts {
+  padding: 10px;
+}
+
+.trending-posts h2 {
+  margin-bottom: 10px;
+}
+
+.post-feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post-card {
+  width: 48%;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.post-card img, .post-card video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.post-card .post-info {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-card .icons i {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.post-card .like-count {
+  font-size: 14px;
+}
+
+.post-card .description {
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.8); */
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.bottom-nav i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* .bottom-nav .active {
+  color: #00bfff;
+} */
+
+#active{
+  color:#00bfff ;
+}
+.bottom-nav a{
+  color:white;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Space Shop</title>
+  <link rel="stylesheet" href="register.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-navigation-bar">
+    <a href="home.html" class="back-icon"><i class="ri-arrow-left-line"></i></a>
+    <div class="logo">Register</div>
+    <div></div> <!-- Placeholder for alignment -->
+  </div>
+
+  <!-- Registration Form -->
+  <div class="register-container">
+    <form id="registerForm">
+      <h2>Create an Account</h2>
+      <div class="form-group">
+        <label for="username"><i class="ri-user-line"></i> Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email"><i class="ri-mail-line"></i> Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="ri-lock-line"></i> Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="phone"><i class="ri-phone-line"></i> Phone Number</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g., 1234567890">
+      </div>
+      <div class="form-group">
+        <label for="gender"><i class="ri-genderless-line"></i> Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn"><i class="ri-user-add-line"></i> Register</button>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <div class="bottom-nav">
+    <a href="index.html" id="active"><i class="ri-home-3-line"></i></a>
+    <a href="explore.html"><i class="ri-search-line "></i></a>
+    <a href="reel.html"><i class="ri-video-line"></i></a>
+    <a href="shop.html"><i class="ri-shopping-bag-line"></i></a>
+    <a href="Plan&Book.html"><i class="ri-calendar-check-line"></i></a>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

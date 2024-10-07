@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="reel.css">
+</head>
+<body>
+    <div class="reels-container">
+        <div class="reel">
+            <video class="video" src="" autoplay muted></video>
+            <div class="buttons">
+              <button class="create-reel-btn"><i class="ri-camera-line"></i></button>
+              <button class="upload-btn"><i class="ri-upload-cloud-line"></i></button>
+            </div>
+            <div class="back-btn">
+                <a href="index.html" class="back-link"><i class="ri-arrow-left-line"></i></a>
+            </div>
+            <div class="actions">
+                <button class="like-btn"><i class="ri-thumb-up-line"></i><span class="count">123</span></button>
+                <button class="dislike-btn"><i class="ri-thumb-down-line"></i><span class="count">45</span></button>
+                <button class="share-btn"><i class="ri-share-line"></i><span class="count">67</span></button>
+                <button class="comment-btn"><i class="ri-chat-3-line"></i><span class="count">89</span></button>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        <!-- Add more reels here -->
+    </div>
+
+    <input type="file" id="videoUpload" accept="video/*" style="display: none;">
+
+    <!-- Comment Popup -->
+    <div id="comment-popup" class="comment-popup">
+      <div class="popup-content">
+          <button class="close-popup-btn">&times;</button>
+          <h3>Leave a Comment</h3>
+          <textarea id="comment-input" placeholder="Enter your comment here..."></textarea>
+          <button class="post-comment-btn">Post</button>
+      </div>
+    </div>
+
+
+
+    <script src="reel.js"></script>
+</body>
+</html>
+

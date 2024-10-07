@@ -1,0 +1,583 @@
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #000428, #004e92);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  color: black;
+}
+
+.top-bar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.top-icons {
+  display: flex;
+  align-items: center;
+}
+
+.top-icons i {
+  font-size: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* New styles for profile icon */
+.profile-icon-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: -3px;
+  
+}
+
+.profile-icon-link:hover {
+  color: #00bfff; /* Change color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stories {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stories-container {
+  display: flex;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.stories-container::-webkit-scrollbar {
+  display: none;
+}
+
+.story {
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.story img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.story span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.story-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#storyVideo {
+  max-width: 100%;
+  max-height: 80%;
+}
+
+#storyProgressBar {
+  width: 0;
+  height: 5px;
+  background: #ff0000;
+  position: fixed;
+  top: 10px;
+  left: 0;
+}
+
+#closeStory {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Post Feed */
+.post-feed {
+  padding: 15px;
+  max-width: 1200px; /* Limiting width for desktop for better readability */
+  margin: 0 auto; /* Centering the feed on desktop */
+}
+
+/* Post Card */
+.post-card {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adding a soft shadow for better visibility */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for desktop */
+.post-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* Media Content (Image/Video) */
+.post-card img, .post-card video {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover; 
+  max-height: 500px; 
+  transition: opacity 0.3s ease;
+}
+
+.post-card img:hover, .post-card video:hover {
+  opacity: 0.9; /* Slight dimming effect on hover */
+}
+
+/* Post Info (Likes and Icons) */
+.post-card .post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.post-card .post-info .icons i {
+  font-size: 26px; /* Larger icons for desktop */
+  margin-right: 15px;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover effect for icons */
+.post-card .post-info .icons i:hover {
+  color: #ff4d4d; /* Red on hover */
+  transform: scale(1.1); /* Slight enlargement */
+}
+
+/* Like Count */
+.post-card .post-info .like-count {
+  font-size: 16px;
+  color: #ccc;
+  transition: opacity 0.3s ease;
+}
+
+.post-card .description {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ddd;
+  transition: font-size 0.3s ease;
+}
+
+/* Heart Icon Transition */
+.like-icon {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.like-icon.ri-heart-fill {
+  color: red; /* Red color for filled heart */
+  transform: scale(1.2); /* Slightly larger on fill */
+}
+
+/* Heart Pop-up Animation */
+.heart-popup {
+  font-size: 30px; /* Size of the heart */
+  color: red; /* Heart color */
+  position: absolute; /* Positioning for pop-up effect */
+  animation: pop 0.5s ease forwards; /* Pop animation */
+  pointer-events: none; /* Prevent interaction */
+}
+
+/* Animation keyframes for heart pop-up */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2); /* Scale up in the middle of the animation */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(3);
+    opacity: 0; /* Fade out */
+  }
+}
+
+/* Smooth transition for like count */
+.like-count {
+  transition: opacity 0.3s ease;
+}
+
+/* Show the like count with a slight fade effect */
+.like-count.fade-in {
+  opacity: 1; /* Fully visible */
+}
+
+.like-count.fade-out {
+  opacity: 0; /* Invisible during transition */
+}
+
+/* Desktop Specific Adjustments */
+@media (min-width: 768px) {
+  .post-feed {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Creating a grid layout for desktop */
+    gap: 20px;
+  }
+
+  .post-card {
+    margin-bottom: 0;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .post-card .description {
+    font-size: 16px; /* Larger text on desktop for readability */
+  }
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 767px) {
+  .post-feed {
+    padding: 10px;
+  }
+
+  .post-card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .post-card img, .post-card video {
+    max-height: 350px; /* Limiting media height for mobile screens */
+  }
+
+  .post-card .description {
+    font-size: 14px;
+  }
+
+  .post-card .post-info .icons i {
+    font-size: 22px; /* Slightly smaller icons for mobile */
+  }
+
+  .post-card .post-info .like-count {
+    font-size: 14px; /* Slightly smaller like count for mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Slightly lighter black overlay */
+  backdrop-filter: blur(8px); /* Increased blur for stronger effect */
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 0.5s ease-out; /* Smooth slide in */
+}
+
+/* Modal Content */
+.modal-content {
+  background: #111; /* Slightly lighter black for contrast */
+  border-radius: 20px;
+  padding: 25px;
+  width: 90%;
+  max-width: 360px; /* Optimized for mobile width */
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1); /* Stronger soft white shadow */
+  animation: fadeInScale 0.5s ease; /* Fade in with scaling effect */
+  color: #fff;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.close:hover {
+  color: #e74c3c; /* A deeper red for hover effect */
+  transform: scale(1.1); /* Slight enlargement for hover */
+}
+
+/* Input Styles */
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  background-color: #333;
+  border: 2px solid #555;
+  color: #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #777; /* Lighter border on hover */
+}
+
+/* Textarea Styles */
+textarea {
+  width: 100%;
+  padding: 18px;
+  margin: 12px 0;
+  background-color: #1f1f1f; /* Slightly lighter black */
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  resize: none;
+  height: 120px;
+  transition: background-color 0.3s ease;
+}
+
+textarea:hover {
+  background-color: #292929; /* Lighter gray for hover */
+}
+
+/* Post Button */
+#postBtn {
+  background-color: #fff;
+  color: #111;
+  border: none;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#postBtn:hover {
+  background-color: #ddd;
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15); /* Subtle shadow */
+}
+
+/* Fade In with Scale Animation */
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  0% { transform: translateY(-20%); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 360px) {
+  .modal-content {
+      padding: 15px;
+  }
+
+  textarea {
+      font-size: 14px;
+      padding: 12px;
+  }
+
+  #postBtn {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.8); */
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.bottom-nav i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* .bottom-nav .active {
+  color: #00bfff;
+} */
+
+#active{
+  color:#00bfff ;
+}
+.bottom-nav a{
+  color:white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

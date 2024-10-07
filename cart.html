@@ -1,0 +1,42 @@
+<!-- cart.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Shop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="top-navigation-bar">
+        <div class="logo">Shop</div>
+        <a href="shop.html">
+            <i class="ri-arrow-left-line back-icon"></i>
+        </a>
+    </div>
+
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <!-- Removed Select All Checkbox -->
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-summary">
+            <p>Total: <span id="cartTotal">Rs0.00</span></p>
+            <button id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html"><i class="ri-home-3-line"></i></a>
+        <a href="explore.html"><i class="ri-search-line"></i></a>
+        <a href="reel.html"><i class="ri-video-line"></i></a>
+        <a id="active" href="shop.html"><i class="ri-shopping-bag-line"></i></a>
+        <a href="Plan&Book.html"><i class="ri-calendar-check-line"></i></a>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Space Shop</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-navigation-bar">
+    <a href="home.html" class="back-icon"><i class="ri-arrow-left-line"></i></a>
+    <div class="logo">Login</div>
+    <div></div> <!-- Placeholder for alignment -->
+  </div>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <form id="loginForm">
+      <h2>Login to Your Account</h2>
+      <div class="form-group">
+        <label for="loginUsername"><i class="ri-user-line"></i> Username</label>
+        <input type="text" id="loginUsername" name="loginUsername" required>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword"><i class="ri-lock-line"></i> Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+      </div>
+      <button type="submit" class="submit-btn"><i class="ri-login-box-line"></i> Login</button>
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </form>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <div class="bottom-nav">
+    <a href="index.html" id="active"><i class="ri-home-3-line"></i></a>
+    <a href="explore.html"><i class="ri-search-line "></i></a>
+    <a href="reel.html"><i class="ri-video-line"></i></a>
+    <a href="shop.html"><i class="ri-shopping-bag-line"></i></a>
+    <a href="Plan&Book.html"><i class="ri-calendar-check-line"></i></a>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

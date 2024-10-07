@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">SV.Media</div>
+        <div class="top-icons">
+            <i class="ri-settings-line" id="settingsBtn"></i>
+        </div>
+    </div>
+
+    <div class="profile-header">
+        <img src="profile2.PNG" alt="Profile Picture" class="profile-pic">
+        <div class="profile-info">
+            <h2 id="username">Siddhivinayak-ai</h2>
+            <div class="profile-stats">
+                <span><strong>0</strong> posts</span>
+                <span><strong>0k</strong> followers</span>
+                <span><strong>0</strong> following</span>
+            </div>
+            <button id="editProfileBtn">Edit Profile</button>
+        </div>
+    </div>
+
+    <div class="bio">
+        <p id="bioText">I am Siddhivinayak-AI<br> <b style="color: rgb(0, 192, 192); font-size:22px;"> Let's Do Something Fucking Great Boys!</b><br><br>Welcome My Team on my First Project<br>Boys Is this an Exciting Project <br>You Guys are Awsome<br>DO GIVE ME FEEDBACK </p>
+        <a href="https://www.google.com/" id="websiteLink">siddhivinayk-ai.community</a>
+    </div>
+
+    
+
+    <div class="tabs">
+        <div class="tab active" data-tab="posts">Posts</div>
+        <div class="tab" data-tab="reels">Reels</div>
+        <div class="tab" data-tab="tagged">Tagged</div>
+    </div>
+
+    <div class="content">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2>Edit Profile</h2>
+            <label for="editUsername">Username</label>
+            <input type="text" id="editUsername" value="new useraname">
+            <label for="editEmail">Business Email</label>
+            <input type="email" id="editEmail" value="example123@gmail.com">
+            <label for="editBio">Bio</label>
+            <textarea id="editBio">Test bio</textarea>
+            <label for="editWebsite">Website</label>
+            <input type="url" id="editWebsite" value="https://example.community">
+            <button id="saveProfileBtn">Save</button>
+        </div>
+    </div>
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+      <a id="active" href="index.html"><i class="ri-home-3-line"></i></a>
+      <a  href="explore.html"><i class="ri-search-line "></i></a>
+      <a href="reel.html"><i class="ri-video-line"></i></a>
+      <a href="shop.html"><i class="ri-shopping-bag-line"></i></a>
+      <a href="Plan&Book.html"><i class="ri-calendar-check-line"></i></a>
+      <!-- <a id="active" href="profile.html"><i class="ri-user-line"></i></a> -->
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
